@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: before_route
+          uri: http://localhost:7771
+          predicates:
+            - Before=2023-01-20T17:42:47.789-07:00[America/Denver]
+#            - Between=2017-01-20T17:42:47.789-07:00[America/Denver], 2017-01-21T17:42:47.789-07:00[America/Denver]
+#            - Cookie=chocolate, ch.p
+#            - Header=X-Request-Id, \d+
+#            - Host=**.somehost.org,**.anotherhost.org
+#            - Method=GET,POST
+#            - Path=/red/{segment},/blue/{segment}
+#            - Query=green
+
+
+
+

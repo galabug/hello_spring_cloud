@@ -22,10 +22,15 @@ public class ServiceZuulServiceaApplication {
 
 	@Value("${server.port}")
 	String port;
-
 	@RequestMapping("/hello")
 	public String home(@RequestParam String name) {
 		String msg = "hello "+name+",i am zuul-servicea on:" +port;
+		System.out.println(msg);
+		return msg;
+	}
+	@RequestMapping("/")
+	public String home() {
+		String msg = "hello,i am zuul-serviceb on:" +port;
 		System.out.println(msg);
 		return msg;
 	}

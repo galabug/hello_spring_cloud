@@ -25,4 +25,10 @@ public class ServiceZuulServicebApplication {
 		System.out.println(msg);
 		return msg;
 	}
+	@RequestMapping("/")
+	public String home() {
+		String msg = "hello,i am zuul-serviceb on:" +port;
+		System.out.println(msg);
+		return msg;
+	}
 }
